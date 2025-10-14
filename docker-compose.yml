@@ -1,0 +1,91 @@
+services:
+  # ------ BACKEND SERVICES ------
+  api:
+    build: ./backend/main-api
+    restart: always
+    env_file: ./backend/main-api/.env.local
+    ports: # <-- ADD THIS SECTION
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - agrosphere-net
+
+  ml-service:
+    build: ./backend/ml-service
+    restart: always
+    env_file: ./backend/ml-service/.env
+    depends_on:
+      db:
+        condition: service_healthy
+      mosquitto:
+        condition: service_started
+    networks:
+      - agrosphere-net
+
+  # ------ FRONTEND SERVICES ------
+  agrosphere-app:
+    build: ./frontend/agrosphere-app
+    restart: always
+    env_file: ./frontend/agrosphere-app/.env.local
+    ports: # <-- ADD THIS SECTION
+      - "3001:3001"
+    networks:
+      - agrosphere-net
+
+  public-website:
+    build: ./frontend/public-website
+    restart: always
+    ports: # <-- ADD THIS SECTION
+      - "5173:5173"
+    networks:
+      - agrosphere-net
+
+  # ------ INFRASTRUCTURE SERVICES ------
+  db:
+    image: timescale/timescaledb:latest-pg16
+    restart: always
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - agrosphere-net
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    restart: always
+    volumes:
+      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    ports:
+      - "1883:1883"
+    networks:
+      - agrosphere-net
+
+  # ------ CLOUDFLARE TUNNEL (Commented out for local dev) ------
+  cloudflared:
+     image: cloudflare/cloudflared:latest
+     restart: always
+     command: tunnel --no-autoupdate run --token YOUR_CLOUDFLARE_TUNNEL_TOKEN
+     depends_on:
+       - agrosphere-app
+       - public-website
+       - api
+     networks:
+       - agrosphere-net
+
+networks:
+  agrosphere-net:
+
+volumes:
+  pgdata:
