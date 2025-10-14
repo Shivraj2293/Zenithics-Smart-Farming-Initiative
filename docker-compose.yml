@@ -76,7 +76,7 @@ services:
   cloudflared:
      image: cloudflare/cloudflared:latest
      restart: always
-     command: tunnel --no-autoupdate run --token YOUR_CLOUDFLARE_TUNNEL_TOKEN
+     command: tunnel --no-autoupdate run --token 8dd0c293-618b-4457-b1f2-8b917dbd8b87
      depends_on:
        - agrosphere-app
        - public-website
