@@ -33,7 +33,7 @@ export const useAuthStore = create<AuthState>()(
       },
     }),
     {
-      name: 'agrosphere-auth',
+      name: 'zenithics-auth',
       storage: createJSONStorage(() => localStorage),
       // This function runs once the store has been loaded from storage
       onRehydrateStorage: () => (state) => {

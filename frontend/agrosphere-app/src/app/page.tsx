@@ -20,7 +20,7 @@ export default async function HomePage() {
       <header className="absolute top-0 left-0 right-0 z-50 py-4 bg-transparent">
         <nav className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/" className="text-3xl font-extrabold text-white drop-shadow-md">
-            Agrosphere
+            zenithics
           </Link>
           <div className="flex items-center space-x-4">
             <Link href="/login" className="px-5 py-2 text-white font-medium rounded-full border-2 border-white/80 hover:bg-white hover:text-green-700 transition-all text-lg">

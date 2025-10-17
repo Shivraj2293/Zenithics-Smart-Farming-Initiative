@@ -57,7 +57,7 @@ export default function SignupPage() {
         />
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 flex flex-col justify-between h-full p-12 text-white">
-          <Link href="/" className="text-4xl font-extrabold text-green-400">Agrosphere</Link>
+          <Link href="/" className="text-4xl font-extrabold text-green-400">zenithics</Link>
           <div>
             <p className="text-3xl font-bold">"The future of farming is here."</p>
             <p className="mt-2 text-lg text-gray-300">Join a community of farmers making data-driven decisions.</p>

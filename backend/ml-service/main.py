@@ -14,7 +14,7 @@ app = FastAPI()
 # --- Database Connection ---
 # Read credentials from environment variables, with fallbacks for local testing
 DB_HOST = os.getenv("DATABASE_HOST", "localhost")
-DB_NAME = os.getenv("DATABASE_NAME", "agrosphere_dev")
+DB_NAME = os.getenv("DATABASE_NAME", "zenithics_dev")
 DB_USER = os.getenv("DATABASE_USER")
 DB_PASS = os.getenv("DATABASE_PASSWORD")
 
@@ -31,7 +31,7 @@ except (psycopg2.OperationalError, ValueError) as e:
 # --- MQTT Client Setup ---
 MQTT_BROKER = os.getenv("MQTT_HOST", "localhost")
 MQTT_PORT = int(os.getenv("MQTT_PORT", 1883)) # Port must be an integer
-MQTT_TOPIC = "agrosphere/sensors/+/data" 
+MQTT_TOPIC = "zenithics/sensors/+/data" 
 
 def on_connect(client, userdata, flags, rc, properties=None):
     if rc == 0:

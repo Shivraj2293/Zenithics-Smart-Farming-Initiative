@@ -27,15 +27,15 @@ export class NotificationsService {
     const mailOptions = {
       from: this.mailFrom, // Use the environment variable
       to: email,
-      subject: 'Welcome to Agrosphere!',
+      subject: 'Welcome to zenithics!',
       html: `<h1>Welcome!</h1><p>Hi there,
 
-Thank you for signing up with Agrosphere. Your account is currently pending approval from our admin team.
+Thank you for signing up with zenithics. Your account is currently pending approval from our admin team.
 
 We'll notify you as soon as your account is activated.
 
 
-The Agrosphere Team</p>`,
+The zenithics Team</p>`,
     };
     try {
       await this.mailer.sendMail(mailOptions);
@@ -52,7 +52,7 @@ The Agrosphere Team</p>`,
     const mailOptions = {
       from: this.mailFrom, // Use the environment variable
       to: email,
-      subject: 'Agrosphere Password Reset Request',
+      subject: 'zenithics Password Reset Request',
       html: `<p>Click this link to reset your password: <a href="${resetLink}">Reset Password</a></p>`,
     };
 
@@ -70,7 +70,7 @@ The Agrosphere Team</p>`,
     const mailOptions = {
       from: this.mailFrom, // Use the environment variable
       to: email,
-      subject: 'Your Agrosphere Account has been Activated!',
+      subject: 'Your zenithics Account has been Activated!',
       html: `<h1>Welcome Aboard!</h1><p>Your account is now active. You can log in to your dashboard here: <a href="${loginLink}">Login</a></p>`,
     };
     try {

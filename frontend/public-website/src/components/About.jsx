@@ -34,7 +34,7 @@ const About = () => {
                         <p>Helping farmers save water, improve yield, and secure a greener future.</p> 
                     </div>
                 </div>
-                <p className='max-w-lg my-10'>At Agrosphere, we use IoT and AI to give farmers real-time insights, making agriculture smarter, efficient, and sustainable.</p>
+                <p className='max-w-lg my-10'>At zenithics, we use IoT and AI to give farmers real-time insights, making agriculture smarter, efficient, and sustainable.</p>
                 <button className='px-8 py-2 text-white bg-blue-600 rounded'>Learn More</button>
             </div>
         </div>

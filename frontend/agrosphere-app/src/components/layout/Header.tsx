@@ -6,7 +6,7 @@ export default function Header() {
     <header className="absolute top-0 left-0 right-0 z-50 py-4 bg-transparent">
       <nav className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="text-3xl font-extrabold text-white drop-shadow-md">
-          Agrosphere
+          zenithics
         </Link>
         <div className="hidden md:flex items-center space-x-8">
           <Link href="#features" className="text-white/90 hover:text-white transition-colors text-lg font-medium">Features</Link>

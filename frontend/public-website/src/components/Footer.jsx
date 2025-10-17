@@ -7,11 +7,11 @@ const Footer = () => {
       <div className='container flex flex-col items-center justify-between mx-auto md:flex-row'>
         
         <div className='w-full h-auto mb-8 text-center md:w-1/3 md:mb-0 md:text-left'>
-          <img src={assets.logo2} alt="Agrosphere Logo" className="mx-auto w-15 md:mx-0"  
+          <img src={assets.logo2} alt="zenithics Logo" className="mx-auto w-15 md:mx-0"  
           />
           <p className='mt-4 text-sm leading-relaxed text-gray-400'>
             Monitor soil health, irrigation, temperature, and weather forecasts — 
-            all from one simple dashboard. With Agrosphere, farming becomes smarter, 
+            all from one simple dashboard. With zenithics, farming becomes smarter, 
             more efficient, and more productive.
           </p>
         </div>
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='py-4 mt-10 text-center text-gray-500 border-t border-gray-700'>
-        Copyright 2025 @ Agrosphere. All Right Reserved.
+        Copyright 2025 @ zenithics. All Right Reserved.
       </div>
     </div>
   )

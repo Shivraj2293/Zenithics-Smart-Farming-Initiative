@@ -5,7 +5,7 @@ export default function Sidebar() {
   return (
     <aside className="w-64 bg-gray-800 text-white flex flex-col">
       <div className="p-6 text-2xl font-bold border-b border-gray-700">
-        Agrosphere <span className="font-light text-green-400">Admin</span>
+        zenithics <span className="font-light text-green-400">Admin</span>
       </div>
       <nav className="flex-grow p-4 space-y-2">
         <Link href="/admin/dashboard" className="flex items-center p-3 rounded-lg hover:bg-gray-700 transition-colors">

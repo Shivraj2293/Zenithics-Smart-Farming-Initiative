@@ -78,7 +78,7 @@ export default function DashboardPage() {
         </div>
       ) : (
         <div className="text-center py-16">
-          <h2 className="text-xl font-semibold text-gray-700">Welcome to Agrosphere!</h2>
+          <h2 className="text-xl font-semibold text-gray-700">Welcome to zenithics!</h2>
           <p className="text-gray-500 mt-2">You don't have any farms set up yet.</p>
           <button onClick={() => setModalOpen(true)} className="mt-6 px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
             Add Your First Farm

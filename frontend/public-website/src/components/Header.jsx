@@ -14,7 +14,7 @@ const Header = () => {
       viewport={{once: true}}
       
       className='container px-6 py-4 mx-auto text-center text-white md:px-20 lg:px-32'>
-        <h2 className='text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20'>"Welcome to Agrosphere – Where Technology Meets Agriculture."</h2>
+        <h2 className='text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20'>"Welcome to zenithics – Where Technology Meets Agriculture."</h2>
         <div className='mt-16 space-x-6'>
             <a href="#Dashboard" className='px-8 py-3 bg-black rounded'>Dashboard</a>
             <a href="#Contact" className='px-8 py-3 bg-blue-500 rounded'>Contact Us</a>

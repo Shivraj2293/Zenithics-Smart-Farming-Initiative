@@ -21,7 +21,7 @@ const Navbar = () => {
     <div className='absolute top-0 left-0 z-10 w-full'>
       <div className='container flex items-center justify-between px-6 py-4 mx-auto'>
         {/* Logo */}
-        <img src={assets.logo} alt="Delta Agro Logo" className='w-36' />
+        <img src={assets.logo} alt="Zenithics Logo" className='w-36' />
         
         {/* Navigation */}
         <ul className='hidden gap-8 md:flex'>
